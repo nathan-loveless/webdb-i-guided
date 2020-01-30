@@ -32,6 +32,8 @@ router.get('/:id', async (req, res) => {
         const post = await db('posts').where('id', id);
         res.status(200).json(post);
     } catch {
+
+        
         res.status(500).json({message: 'Failed to get post'});
     }
 });
